@@ -1,0 +1,78 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.mirror {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #333;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #444;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.top-ornament, .bottom-ornament, .side-ornaments {
+    position: absolute;
+    background-color: #555;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.top-ornament {
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 30px;
+    border-radius: 50% 50% 0 0;
+}
+
+.bottom-ornament {
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 40px;
+    border-radius: 0 0 50% 50%;
+}
+
+.side-ornaments {
+    top: 50%;
+    width: 20px;
+    height: 80px;
+    transform: translateY(-50%);
+}
+
+.left {
+    left: -20px;
+    border-radius: 50% 0 0 50%;
+}
+
+.right {
+    right: -20px;
+    border-radius: 0 50% 50% 0;
+}
+
+.reflection {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.2));
+    border-radius: 20px;
+}
